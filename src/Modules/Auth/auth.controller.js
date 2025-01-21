@@ -3,6 +3,9 @@ import { catchError } from "../../utils/catchError.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { AppError } from "../../utils/appError.js";
+
+
+
 const signup = catchError(async (req, res, next) => {
   req.body.role = "Manager";
   const employee = new Employee(req.body);
